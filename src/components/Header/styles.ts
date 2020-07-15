@@ -22,14 +22,22 @@ export const Container = styled.div<ContainerProps>`
         text-decoration: none;
         font-size: 16px;
         transition: opacity 0.2s;
+        padding-bottom: 5px;
 
         & + a {
           margin-left: 32px;
+          border-bottom: ${({ size }) =>
+            size === 'large' ? '' : '2px solid #ff872c'};
         }
 
         &:hover {
           opacity: 0.6;
         }
+      }
+
+      a:first-child {
+        border-bottom: ${({ size }) =>
+          size === 'large' ? '2px solid #ff872c' : ''};
       }
     }
   }
